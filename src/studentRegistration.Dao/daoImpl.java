@@ -181,7 +181,7 @@ public class daoImpl implements dao {
 	@Override
 	public int getCourseId(String cName) throws SQLException, CourseException {
 		// TODO Auto-generated method stub
-int answer = 0;
+           int answer = 0;
 		
 		try(Connection conn = Utility.getConnection()){
 			PreparedStatement ps = conn.prepareStatement("select cId from courses where cName = ?");
@@ -254,7 +254,7 @@ int answer = 0;
 	@Override
 	public BatchRecord getBatchRecordForStudent(String sEmail) {
 		// TODO Auto-generated method stub
-BatchRecord brdto = null;
+        BatchRecord brdto = null;
 		
 		try(Connection conn = Utility.getConnection()){
 			PreparedStatement ps = conn.prepareStatement("select * from batch where sEmail = ?");
