@@ -1,0 +1,19 @@
+package studentRegistration.Services;
+
+import java.util.Scanner;
+import studentRegistration.Dao.*;
+public class AdminCreateBatchunderaCourse {
+	
+	public void AdminCreateBatchunderaCourse() {
+		Scanner sc = new Scanner(System.in);
+		dao daoObj = new daoImpl();
+		System.out.println("Enter Course name:");
+		String cName = sc.next().toUpperCase();
+		System.out.println("Enter Batch no:");
+		int bId = sc.nextInt();
+		System.out.println("Enter total seats in this batch: ");
+		int totalSeats = sc.nextInt();
+		daoObj.adminCreatBatchunderaCourse(cName, bId, totalSeats);
+
+	}
+}
